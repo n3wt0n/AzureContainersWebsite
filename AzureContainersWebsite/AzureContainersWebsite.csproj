@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <DockerComposeProjectPath>..\docker-compose.dcproj</DockerComposeProjectPath>
+    <UserSecretsId>4deac2d9-dfbb-43d2-bc59-e9e68076b734</UserSecretsId>
+    <ApplicationInsightsResourceId>/subscriptions/cd558c1c-643a-409c-a1f0-d4f07aafadc9/resourcegroups/ContainerComparisonWebSite/providers/microsoft.insights/components/AzureContainersWebsite</ApplicationInsightsResourceId>
+    <ApplicationInsightsAnnotationResourceId>/subscriptions/cd558c1c-643a-409c-a1f0-d4f07aafadc9/resourcegroups/ContainerComparisonWebSite/providers/microsoft.insights/components/AzureContainersWebsite</ApplicationInsightsAnnotationResourceId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.ApplicationInsights.AspNetCore" Version="2.1.1" />
+    <PackageReference Include="Microsoft.AspNetCore.App" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services" />
+  </ItemGroup>
+
+</Project>
