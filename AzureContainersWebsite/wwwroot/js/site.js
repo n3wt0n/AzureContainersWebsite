@@ -22,20 +22,28 @@ $(function () {
             $(".css-label").removeAttr('disabled');
         });
 
+    //LoadServicePanels("AKS");
+    //LoadServicePanels("AppService");
+    //LoadServicePanels("ServiceFabric");
+
     $(".css-checkbox").change(function () {
         var serviceValue = $(this).val();
 
-        GetShowPanel("General", "pnlGeneral", serviceValue);
-        GetShowPanel("Hosting", "pnlHosting", serviceValue);
-        GetShowPanel("DevOps", "pnlDevOps", serviceValue);
-        GetShowPanel("Scalability", "pnlScalability", serviceValue);
-        GetShowPanel("Availability", "pnlAvailability", serviceValue);
-        GetShowPanel("Security", "pnlSecurity", serviceValue);
-        GetShowPanel("Discovery", "pnlDiscovery", serviceValue);
-        GetShowPanel("Integration", "pnlIntegration", serviceValue);
-        GetShowPanel("CostSupport", "pnlCostSupport", serviceValue);
+        LoadServicePanels(serviceValue);
     });
 });
+
+function LoadServicePanels(serviceValue) {
+    GetShowPanel("General", "pnlGeneral", serviceValue);
+    GetShowPanel("Hosting", "pnlHosting", serviceValue);
+    GetShowPanel("DevOps", "pnlDevOps", serviceValue);
+    GetShowPanel("Scalability", "pnlScalability", serviceValue);
+    GetShowPanel("Availability", "pnlAvailability", serviceValue);
+    GetShowPanel("Security", "pnlSecurity", serviceValue);
+    GetShowPanel("Discovery", "pnlDiscovery", serviceValue);
+    GetShowPanel("Integration", "pnlIntegration", serviceValue);
+    GetShowPanel("CostSupport", "pnlCostSupport", serviceValue);
+}
 
 function GetShowPanel(section, panel, serviceValue) {
     $.ajax({

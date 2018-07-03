@@ -25,49 +25,85 @@
     <div class="row">
         <div class="col-sm-12">
             <input type="checkbox" name="chkACI" id="chkACI" class="css-checkbox" value="@Services.ACI" /><label for="chkACI" class="css-label">@Services.ACI.GetDisplayName()</label>
-            <input type="checkbox" name="chkAKS" id="chkAKS" class="css-checkbox" value="@Services.AKS" /><label for="chkAKS" class="css-label">@Services.AKS.GetDisplayName()</label>
-            <input type="checkbox" name="chkAppService" id="chkAppService" class="css-checkbox" value="@Services.AppService" /><label for="chkAppService" class="css-label">@Services.AppService.GetDisplayName()</label>
+            <input type="checkbox" name="chkAKS" id="chkAKS" class="css-checkbox" checked value="@Services.AKS" /><label for="chkAKS" class="css-label">@Services.AKS.GetDisplayName()</label>
+            <input type="checkbox" name="chkAppService" id="chkAppService" class="css-checkbox" checked value="@Services.AppService" /><label for="chkAppService" class="css-label">@Services.AppService.GetDisplayName()</label>
             <input type="checkbox" name="chkPCF" id="chkPCF" class="css-checkbox" value="@Services.CloudFoundry" /><label for="chkPCF" class="css-label">@Services.CloudFoundry.GetDisplayName()</label>
             <input type="checkbox" name="chkOpenShift" id="chkOpenShift" class="css-checkbox" value="@Services.OpenShift" /><label for="chkOpenShift" class="css-label">@Services.OpenShift.GetDisplayName()</label>
-            <input type="checkbox" name="chkServiceFabric" id="chkServiceFabric" class="css-checkbox" value="@Services.ServiceFabric" /><label for="chkServiceFabric" class="css-label">@Services.ServiceFabric.GetDisplayName()</label>
+            <input type="checkbox" name="chkServiceFabric" id="chkServiceFabric" class="css-checkbox" checked value="@Services.ServiceFabric" /><label for="chkServiceFabric" class="css-label">@Services.ServiceFabric.GetDisplayName()</label>
             <div id="loadingDiv">
-                <img src="~/images/loading.gif" class="loadingImage"  />
+                <img src="~/images/loading.gif" class="loadingImage" />
             </div>
         </div>
     </div>
     <h4>General Information</h4>
-    <div class="row" id="pnlGeneral"></div>
+    <div class="row" id="pnlGeneral">
+        <partial name="~/Views/AKS/General.cshtml" />
+        <partial name="~/Views/AppService/General.cshtml" />
+        <partial name="~/Views/ServiceFabric/General.cshtml" />
+    </div>
     <br />
 
     <h4>Hosting Model</h4>
-    <div class="row" id="pnlHosting"></div>
+    <div class="row" id="pnlHosting">
+        <partial name="~/Views/AKS/Hosting.cshtml" />
+        <partial name="~/Views/AppService/Hosting.cshtml" />
+        <partial name="~/Views/ServiceFabric/Hosting.cshtml" />
+    </div>
     <br />
 
     <h4>DevOps</h4>
-    <div class="row" id="pnlDevOps"></div>
+    <div class="row" id="pnlDevOps">
+        <partial name="~/Views/AKS/DevOps.cshtml" />
+        <partial name="~/Views/AppService/DevOps.cshtml" />
+        <partial name="~/Views/ServiceFabric/DevOps.cshtml" />
+    </div>
     <br />
 
     <h4>Scalability</h4>
-    <div class="row" id="pnlScalability"></div>
+    <div class="row" id="pnlScalability">
+        <partial name="~/Views/AKS/Scalability.cshtml" />
+        <partial name="~/Views/AppService/Scalability.cshtml" />
+        <partial name="~/Views/ServiceFabric/Scalability.cshtml" />
+    </div>
     <br />
 
     <h4>Availability</h4>
-    <div class="row" id="pnlAvailability"></div>
+    <div class="row" id="pnlAvailability">
+        <partial name="~/Views/AKS/Availability.cshtml" />
+        <partial name="~/Views/AppService/Availability.cshtml" />
+        <partial name="~/Views/ServiceFabric/Availability.cshtml" />
+    </div>
     <br />
 
     <h4>Security</h4>
-    <div class="row" id="pnlSecurity"></div>
+    <div class="row" id="pnlSecurity">
+        <partial name="~/Views/AKS/Security.cshtml" />
+        <partial name="~/Views/AppService/Security.cshtml" />
+        <partial name="~/Views/ServiceFabric/Security.cshtml" />
+    </div>
     <br />
 
     <h4>Service Discovery</h4>
-    <div class="row" id="pnlDiscovery"></div>
+    <div class="row" id="pnlDiscovery">
+        <partial name="~/Views/AKS/Discovery.cshtml" />
+        <partial name="~/Views/AppService/Discovery.cshtml" />
+        <partial name="~/Views/ServiceFabric/Discovery.cshtml" />
+    </div>
     <br />
 
     <h4>Integration</h4>
-    <div class="row" id="pnlIntegration"></div>
+    <div class="row" id="pnlIntegration">
+        <partial name="~/Views/AKS/Integration.cshtml" />
+        <partial name="~/Views/AppService/Integration.cshtml" />
+        <partial name="~/Views/ServiceFabric/Integration.cshtml" />
+    </div>
     <br />
 
-    <h4>Cost &Aacute; Support</h4>
-    <div class="row" id="pnlCostSupport"></div>
+    <h4>Cost &amp; Support</h4>
+    <div class="row" id="pnlCostSupport">
+        <partial name="~/Views/AKS/CostSupport.cshtml" />
+        <partial name="~/Views/AppService/CostSupport.cshtml" />
+        <partial name="~/Views/ServiceFabric/CostSupport.cshtml" />
+    </div>
     <br />
 </content>
