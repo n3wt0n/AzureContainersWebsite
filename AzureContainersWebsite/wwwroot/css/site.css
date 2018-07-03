@@ -33,9 +33,9 @@ header {
 
 }
 
-/* QR code generator */
-#qrCode {
-    margin: 15px;
+/*Lists*/
+ul {
+    padding-left: 10px;
 }
 
 /* Checkbox */

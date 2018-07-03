@@ -4,7 +4,25 @@
             <h3 class="panel-title">@Services.ServiceFabric.GetDisplayName()</h3>
         </div>
         <div class="panel-body">
-            Panel content
+            <ul>
+                <li>Public endpoint</li>
+                <li>Service Registry (SDK)</li>
+                <li>Remoting (.Net, Java)</li>
+                <li>
+                    DNS Resolution
+                    <ul>
+                        <li>No client dependencies</li>
+                        <li>https://myService/myApi</li>
+                    </ul>
+                </li>
+                <li>
+                    Reverse Proxy
+                    <ul>
+                        <li>No client dependencies</li>
+                        <li>https://localhost/myService/myApi</li>
+                    </ul>
+                </li>
+            </ul>
         </div>
     </div>
 </div>
