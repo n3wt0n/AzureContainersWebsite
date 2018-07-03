@@ -36,26 +36,102 @@
         </div>
     </div>
     <h4>General Information</h4>
-    <div class="row" id="pnlGeneral">
-        <partial name="~/Views/AKS/General.cshtml" />
-        <partial name="~/Views/AppService/General.cshtml" />
-        <partial name="~/Views/ServiceFabric/General.cshtml" />
+    <div class="row">
+        <div class="col-sm-2 col-md-1">
+            <div class="panel panel-Menu">
+                <div class="panel-heading">
+                    <h3 class="panel-title">&nbsp;</h3>
+                </div>
+                <div class="panel-body">
+                    <ul>
+                        <li>Description</li>
+                        <li class="separator">&nbsp;</li>
+                        <li>Docs</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-10 col-md-11">
+            <div class="row" id="pnlGeneral">
+                <partial name="~/Views/AKS/General.cshtml" />
+                <partial name="~/Views/AppService/General.cshtml" />
+                <partial name="~/Views/ServiceFabric/General.cshtml" />
+            </div>
+        </div>
     </div>
     <br />
 
     <h4>Hosting Model</h4>
-    <div class="row" id="pnlHosting">
-        <partial name="~/Views/AKS/Hosting.cshtml" />
-        <partial name="~/Views/AppService/Hosting.cshtml" />
-        <partial name="~/Views/ServiceFabric/Hosting.cshtml" />
+    <div class="row">
+        <div class="col-sm-2 col-md-1">
+            <div class="panel panel-Menu">
+                <div class="panel-heading">
+                    <h3 class="panel-title">&nbsp;</h3>
+                </div>
+                <div class="panel-body">
+                    <ul>
+                        <li>Workloads</li>
+                        <li class="separator">&nbsp;</li>
+                        <li>Min. Nodes</li>
+                        <li class="separator">&nbsp;</li>
+                        <li>Supported OS</li>
+                        <li class="separator">&nbsp;</li>
+                        <li>Service type</li>
+                        <li class="separator">&nbsp;</li>
+                        <li>PaaS</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-10 col-md-11">
+            <div class="row" id="pnlHosting">
+                <partial name="~/Views/AKS/Hosting.cshtml" />
+                <partial name="~/Views/AppService/Hosting.cshtml" />
+                <partial name="~/Views/ServiceFabric/Hosting.cshtml" />
+            </div>
+        </div>
     </div>
     <br />
 
     <h4>DevOps</h4>
-    <div class="row" id="pnlDevOps">
-        <partial name="~/Views/AKS/DevOps.cshtml" />
-        <partial name="~/Views/AppService/DevOps.cshtml" />
-        <partial name="~/Views/ServiceFabric/DevOps.cshtml" />
+    <div class="row">
+        <div class="col-sm-2 col-md-1">
+            <div class="panel panel-Menu">
+                <div class="panel-heading">
+                    <h3 class="panel-title">&nbsp;</h3>
+                </div>
+                <div class="panel-body">
+                    <ul>
+                        <li>Visual Studio</li>
+                        <li class="separator">&nbsp;</li>
+                        <li>Local Debug</li>
+                        <li class="separator">&nbsp;</li>
+                        <li>Development</li>
+                        <li class="separator">&nbsp;</li>
+                        <li>App Update</li>
+                        <li class="separator">&nbsp;</li>
+                        <li>CI/CD</li>
+                        <li class="separator">&nbsp;</li>
+                        <li>Languages</li>
+                        <li class="separator">&nbsp;</li>
+                        <li>Portability</li>
+                        <li class="separator">&nbsp;</li>
+                        <li>On-Prem</li>
+                        <li class="separator">&nbsp;</li>
+                        <li>Orchestrator</li>
+                        <li class="separator">&nbsp;</li>
+                        <li>Management</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-10 col-md-11">
+            <div class="row" id="pnlDevOps">
+                <partial name="~/Views/AKS/DevOps.cshtml" />
+                <partial name="~/Views/AppService/DevOps.cshtml" />
+                <partial name="~/Views/ServiceFabric/DevOps.cshtml" />
+            </div>
+        </div>
     </div>
     <br />
 

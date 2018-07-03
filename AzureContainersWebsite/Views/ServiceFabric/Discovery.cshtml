@@ -1,4 +1,4 @@
-﻿<div class="col-sm-2" id="@PanelsHelper.GetDiscoveryPanelName(Services.ServiceFabric)">
+﻿<div class="col-sm-3 col-md-2" id="@PanelsHelper.GetDiscoveryPanelName(Services.ServiceFabric)">
     <div class="panel panel-ServiceFabric">
         <div class="panel-heading">
             <h3 class="panel-title">@Services.ServiceFabric.GetDisplayName()</h3>
@@ -6,8 +6,11 @@
         <div class="panel-body">
             <ul>
                 <li>Public endpoint</li>
+                <li class="separator">&nbsp;</li>
                 <li>Service Registry (SDK)</li>
+                <li class="separator">&nbsp;</li>
                 <li>Remoting (.Net, Java)</li>
+                <li class="separator">&nbsp;</li>
                 <li>
                     DNS Resolution
                     <ul>
@@ -15,6 +18,7 @@
                         <li>https://myService/myApi</li>
                     </ul>
                 </li>
+                <li class="separator">&nbsp;</li>
                 <li>
                     Reverse Proxy
                     <ul>

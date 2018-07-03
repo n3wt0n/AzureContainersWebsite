@@ -1,4 +1,4 @@
-﻿<div class="col-sm-2" id="@PanelsHelper.GetScalabilityPanelName(Services.ServiceFabric)">
+﻿<div class="col-sm-3 col-md-2" id="@PanelsHelper.GetScalabilityPanelName(Services.ServiceFabric)">
     <div class="panel panel-ServiceFabric">
         <div class="panel-heading">
             <h3 class="panel-title">@Services.ServiceFabric.GetDisplayName()</h3>
@@ -6,7 +6,9 @@
         <div class="panel-body">
             <ul>
                 <li>Auto scaling supported (VMSS)</li>
+                <li class="separator">&nbsp;</li>
                 <li>Max nodes: 1000+</li>
+                <li class="separator">&nbsp;</li>
                 <li>Automatic re-balancing capabilities across nodes, based on custom metrics</li>
             </ul>
         </div>
