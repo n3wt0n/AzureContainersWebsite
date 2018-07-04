@@ -72,7 +72,7 @@
                     <ul>
                         <li>Workloads</li>
                         <li class="separator">&nbsp;</li>
-                        <li>Min. Nodes</li>
+                        <li>Min Nodes</li>
                         <li class="separator">&nbsp;</li>
                         <li>Supported OS</li>
                         <li class="separator">&nbsp;</li>
@@ -136,50 +136,176 @@
     <br />
 
     <h4>Scalability</h4>
-    <div class="row" id="pnlScalability">
-        <partial name="~/Views/AKS/Scalability.cshtml" />
-        <partial name="~/Views/AppService/Scalability.cshtml" />
-        <partial name="~/Views/ServiceFabric/Scalability.cshtml" />
+    <div class="row">
+        <div class="col-sm-2 col-md-1">
+            <div class="panel panel-Menu">
+                <div class="panel-heading">
+                    <h3 class="panel-title">&nbsp;</h3>
+                </div>
+                <div class="panel-body">
+                    <ul>
+                        <li>Auto-scaling</li>
+                        <li class="separator">&nbsp;</li>
+                        <li>Max Nodes</li>
+                        <li class="separator">&nbsp;</li>
+                        <li>Auto-balancing</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-10 col-md-11">
+            <div class="row" id="pnlScalability">
+                <partial name="~/Views/AKS/Scalability.cshtml" />
+                <partial name="~/Views/AppService/Scalability.cshtml" />
+                <partial name="~/Views/ServiceFabric/Scalability.cshtml" />
+            </div>
+        </div>
     </div>
     <br />
 
     <h4>Availability</h4>
-    <div class="row" id="pnlAvailability">
-        <partial name="~/Views/AKS/Availability.cshtml" />
-        <partial name="~/Views/AppService/Availability.cshtml" />
-        <partial name="~/Views/ServiceFabric/Availability.cshtml" />
+    <div class="row">
+        <div class="col-sm-2 col-md-1">
+            <div class="panel panel-Menu">
+                <div class="panel-heading">
+                    <h3 class="panel-title">&nbsp;</h3>
+                </div>
+                <div class="panel-body">
+                    <ul>
+                        <li>SLA</li>
+                        <li class="separator">&nbsp;</li>
+                        <li>Failover</li>
+                        <li class="separator">&nbsp;</li>
+                        <li>Multi-region</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-10 col-md-11">
+            <div class="row" id="pnlAvailability">
+                <partial name="~/Views/AKS/Availability.cshtml" />
+                <partial name="~/Views/AppService/Availability.cshtml" />
+                <partial name="~/Views/ServiceFabric/Availability.cshtml" />
+            </div>
+        </div>
     </div>
     <br />
 
     <h4>Security</h4>
-    <div class="row" id="pnlSecurity">
-        <partial name="~/Views/AKS/Security.cshtml" />
-        <partial name="~/Views/AppService/Security.cshtml" />
-        <partial name="~/Views/ServiceFabric/Security.cshtml" />
+    <div class="row">
+        <div class="col-sm-2 col-md-1">
+            <div class="panel panel-Menu">
+                <div class="panel-heading">
+                    <h3 class="panel-title">&nbsp;</h3>
+                </div>
+                <div class="panel-body">
+                    <ul>
+                        <li>SSL</li>
+                        <li class="separator">&nbsp;</li>
+                        <li>RBAC</li>
+                        <li class="separator">&nbsp;</li>
+                        <li>OS Updates</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-10 col-md-11">
+            <div class="row" id="pnlSecurity">
+                <partial name="~/Views/AKS/Security.cshtml" />
+                <partial name="~/Views/AppService/Security.cshtml" />
+                <partial name="~/Views/ServiceFabric/Security.cshtml" />
+            </div>
+        </div>
     </div>
     <br />
 
     <h4>Service Discovery</h4>
-    <div class="row" id="pnlDiscovery">
-        <partial name="~/Views/AKS/Discovery.cshtml" />
-        <partial name="~/Views/AppService/Discovery.cshtml" />
-        <partial name="~/Views/ServiceFabric/Discovery.cshtml" />
+    <div class="row">
+        <div class="col-sm-2 col-md-1">
+            <div class="panel panel-Menu">
+                <div class="panel-heading">
+                    <h3 class="panel-title">&nbsp;</h3>
+                </div>
+                <div class="panel-body">
+                    <ul>
+                        <li>Public endpoint</li>
+                        <li class="separator">&nbsp;</li>
+                        <li>DNS resolution</li>
+                        <li class="separator">&nbsp;</li>
+                        <li>Remoting</li>
+                        <li class="separator">&nbsp;</li>
+                        <li>Service Registry</li>
+                        <li class="separator">&nbsp;</li>
+                        <li>Reverse Proxy</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-10 col-md-11">
+            <div class="row" id="pnlDiscovery">
+                <partial name="~/Views/AKS/Discovery.cshtml" />
+                <partial name="~/Views/AppService/Discovery.cshtml" />
+                <partial name="~/Views/ServiceFabric/Discovery.cshtml" />
+            </div>
+        </div>
     </div>
     <br />
 
     <h4>Integration</h4>
-    <div class="row" id="pnlIntegration">
-        <partial name="~/Views/AKS/Integration.cshtml" />
-        <partial name="~/Views/AppService/Integration.cshtml" />
-        <partial name="~/Views/ServiceFabric/Integration.cshtml" />
+    <div class="row">
+        <div class="col-sm-2 col-md-1">
+            <div class="panel panel-Menu">
+                <div class="panel-heading">
+                    <h3 class="panel-title">&nbsp;</h3>
+                </div>
+                <div class="panel-body">
+                    <ul>
+                        <li>API Management</li>
+                        <li class="separator">&nbsp;</li>
+                        <li>Load Balancer</li>
+                        <li class="separator">&nbsp;</li>
+                        <li>Monitoring</li>
+                        <li class="separator">&nbsp;</li>
+                        <li>Failure simulation</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-10 col-md-11">
+            <div class="row" id="pnlIntegration">
+                <partial name="~/Views/AKS/Integration.cshtml" />
+                <partial name="~/Views/AppService/Integration.cshtml" />
+                <partial name="~/Views/ServiceFabric/Integration.cshtml" />
+            </div>
+        </div>
     </div>
     <br />
 
     <h4>Cost &amp; Support</h4>
-    <div class="row" id="pnlCostSupport">
-        <partial name="~/Views/AKS/CostSupport.cshtml" />
-        <partial name="~/Views/AppService/CostSupport.cshtml" />
-        <partial name="~/Views/ServiceFabric/CostSupport.cshtml" />
+    <div class="row">
+        <div class="col-sm-2 col-md-1">
+            <div class="panel panel-Menu">
+                <div class="panel-heading">
+                    <h3 class="panel-title">&nbsp;</h3>
+                </div>
+                <div class="panel-body">
+                    <ul>
+                        <li>Azure</li>
+                        <li class="separator">&nbsp;</li>
+                        <li>On-Prem</li>
+                        <li class="separator">&nbsp;</li>
+                        <li>Support</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-10 col-md-11">
+            <div class="row" id="pnlCostSupport">
+                <partial name="~/Views/AKS/CostSupport.cshtml" />
+                <partial name="~/Views/AppService/CostSupport.cshtml" />
+                <partial name="~/Views/ServiceFabric/CostSupport.cshtml" />
+            </div>
+        </div>
     </div>
     <br />
 </content>
