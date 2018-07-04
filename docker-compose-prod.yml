@@ -5,4 +5,4 @@ services:
     image: ${DOCKER_REGISTRY}azurecontainerswebsite
     build:
       context: .
-      dockerfile: AzureContainersWebsite/Dockerfile
+      dockerfile: AzureContainersWebsite/DockerfileProd
