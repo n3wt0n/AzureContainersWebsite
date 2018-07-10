@@ -7,6 +7,7 @@
         AppService,
         OpenShift,
         CloudFoundry,
-        ServiceFabric
+        ServiceFabric,
+        Batch
     }
 }
