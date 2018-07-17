@@ -8,6 +8,7 @@
         OpenShift,
         CloudFoundry,
         ServiceFabric,
+        ServiceFabricMesh,
         Batch
     }
 }

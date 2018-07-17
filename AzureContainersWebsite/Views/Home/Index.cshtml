@@ -31,6 +31,7 @@
             <input type="checkbox" name="chkPCF" id="chkPCF" class="css-checkbox" value="@Services.CloudFoundry" /><label for="chkPCF" class="css-label">@Services.CloudFoundry.GetDisplayName()</label>
             <input type="checkbox" name="chkOpenShift" id="chkOpenShift" class="css-checkbox" value="@Services.OpenShift" /><label for="chkOpenShift" class="css-label">@Services.OpenShift.GetDisplayName()</label>
             <input type="checkbox" name="chkServiceFabric" id="chkServiceFabric" class="css-checkbox" checked value="@Services.ServiceFabric" /><label for="chkServiceFabric" class="css-label">@Services.ServiceFabric.GetDisplayName()</label>
+            <input type="checkbox" name="chkServiceFabricMesh" id="chkServiceFabricMesh" class="css-checkbox" checked value="@Services.ServiceFabricMesh" /><label for="chkServiceFabricMesh" class="css-label">@Services.ServiceFabricMesh.GetDisplayName()</label>
             <div id="loadingDiv">
                 <img src="~/images/loading.gif" class="loadingImage" />
             </div>
@@ -305,6 +306,7 @@
                 <partial name="~/Views/AKS/CostSupport.cshtml" />
                 <partial name="~/Views/AppService/CostSupport.cshtml" />
                 <partial name="~/Views/ServiceFabric/CostSupport.cshtml" />
+                <partial name="~/Views/ServiceFabricMesh/CostSupport.cshtml" />
             </div>
         </div>
     </div>
