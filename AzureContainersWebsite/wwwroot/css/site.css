@@ -261,3 +261,26 @@ label[disabled] {
     .panel-ServiceFabric > .panel-footer + .panel-collapse > .panel-body {
         border-bottom-color: #ebccd1;
     }
+
+.panel-ServiceFabricMesh {
+    border-color: #f2aa11;
+}
+
+    .panel-ServiceFabricMesh > .panel-heading {
+        color: #b37e0c;
+        background-color: #f2deaa;
+        border-color: #f5da9f;
+    }
+
+        .panel-ServiceFabricMesh > .panel-heading + .panel-collapse > .panel-body {
+            border-top-color: #f5da9f;
+        }
+
+        .panel-ServiceFabricMesh > .panel-heading .badge {
+            color: #f2deaa;
+            background-color: #a94442;
+        }
+
+    .panel-ServiceFabricMesh > .panel-footer + .panel-collapse > .panel-body {
+        border-bottom-color: #f5da9f;
+    }
