@@ -193,6 +193,29 @@ label[disabled] {
         border-bottom-color: #d6e9c6;
     }
 
+.panel-Batch {
+    border-color: #ddd;
+}
+
+    .panel-Batch > .panel-heading {
+        color: #333;
+        background-color: #d68aff;
+        border-color: #e6bdfc;
+    }
+
+        .panel-Batch > .panel-heading + .panel-collapse > .panel-body {
+            border-top-color: #e6bdfc;
+        }
+
+        .panel-Batch > .panel-heading .badge {
+            color: #d68aff;
+            background-color: #333;
+        }
+
+    .panel-Batch > .panel-footer + .panel-collapse > .panel-body {
+        border-bottom-color: #e6bdfc;
+    }
+
 .panel-CloudFoundry {
     border-color: #bce8f1;
 }
