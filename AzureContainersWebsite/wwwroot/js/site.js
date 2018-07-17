@@ -22,10 +22,6 @@ $(function () {
             $(".css-label").removeAttr('disabled');
         });
 
-    //LoadServicePanels("AKS");
-    //LoadServicePanels("AppService");
-    //LoadServicePanels("ServiceFabric");
-
     $(".css-checkbox").change(function () {
         var serviceValue = $(this).val();
 

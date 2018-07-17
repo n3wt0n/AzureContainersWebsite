@@ -27,7 +27,7 @@
             <input type="checkbox" name="chkACI" id="chkACI" class="css-checkbox" value="@Services.ACI" /><label for="chkACI" class="css-label">@Services.ACI.GetDisplayName()</label>
             <input type="checkbox" name="chkAKS" id="chkAKS" class="css-checkbox" checked value="@Services.AKS" /><label for="chkAKS" class="css-label">@Services.AKS.GetDisplayName()</label>
             <input type="checkbox" name="chkAppService" id="chkAppService" class="css-checkbox" checked value="@Services.AppService" /><label for="chkAppService" class="css-label">@Services.AppService.GetDisplayName()</label>
-            <input type="checkbox" name="chkBatch" id="chkBatch" class="css-checkbox" checked value="@Services.Batch" /><label for="chkBatch" class="css-label">@Services.Batch.GetDisplayName()</label>
+            <input type="checkbox" name="chkBatch" id="chkBatch" class="css-checkbox" value="@Services.Batch" /><label for="chkBatch" class="css-label">@Services.Batch.GetDisplayName()</label>
             <input type="checkbox" name="chkPCF" id="chkPCF" class="css-checkbox" value="@Services.CloudFoundry" /><label for="chkPCF" class="css-label">@Services.CloudFoundry.GetDisplayName()</label>
             <input type="checkbox" name="chkOpenShift" id="chkOpenShift" class="css-checkbox" value="@Services.OpenShift" /><label for="chkOpenShift" class="css-label">@Services.OpenShift.GetDisplayName()</label>
             <input type="checkbox" name="chkServiceFabric" id="chkServiceFabric" class="css-checkbox" checked value="@Services.ServiceFabric" /><label for="chkServiceFabric" class="css-label">@Services.ServiceFabric.GetDisplayName()</label>
@@ -58,6 +58,7 @@
                 <partial name="~/Views/AKS/General.cshtml" />
                 <partial name="~/Views/AppService/General.cshtml" />
                 <partial name="~/Views/ServiceFabric/General.cshtml" />
+                <partial name="~/Views/ServiceFabricMesh/General.cshtml" />
             </div>
         </div>
     </div>
@@ -90,6 +91,7 @@
                 <partial name="~/Views/AKS/Hosting.cshtml" />
                 <partial name="~/Views/AppService/Hosting.cshtml" />
                 <partial name="~/Views/ServiceFabric/Hosting.cshtml" />
+                <partial name="~/Views/ServiceFabricMesh/Hosting.cshtml" />
             </div>
         </div>
     </div>
@@ -132,6 +134,7 @@
                 <partial name="~/Views/AKS/DevOps.cshtml" />
                 <partial name="~/Views/AppService/DevOps.cshtml" />
                 <partial name="~/Views/ServiceFabric/DevOps.cshtml" />
+                <partial name="~/Views/ServiceFabricMesh/DevOps.cshtml" />
             </div>
         </div>
     </div>
@@ -160,6 +163,7 @@
                 <partial name="~/Views/AKS/Scalability.cshtml" />
                 <partial name="~/Views/AppService/Scalability.cshtml" />
                 <partial name="~/Views/ServiceFabric/Scalability.cshtml" />
+                <partial name="~/Views/ServiceFabricMesh/Scalability.cshtml" />
             </div>
         </div>
     </div>
@@ -188,6 +192,7 @@
                 <partial name="~/Views/AKS/Availability.cshtml" />
                 <partial name="~/Views/AppService/Availability.cshtml" />
                 <partial name="~/Views/ServiceFabric/Availability.cshtml" />
+                <partial name="~/Views/ServiceFabricMesh/Availability.cshtml" />
             </div>
         </div>
     </div>
@@ -216,6 +221,7 @@
                 <partial name="~/Views/AKS/Security.cshtml" />
                 <partial name="~/Views/AppService/Security.cshtml" />
                 <partial name="~/Views/ServiceFabric/Security.cshtml" />
+                <partial name="~/Views/ServiceFabricMesh/Security.cshtml" />
             </div>
         </div>
     </div>
@@ -248,6 +254,7 @@
                 <partial name="~/Views/AKS/Discovery.cshtml" />
                 <partial name="~/Views/AppService/Discovery.cshtml" />
                 <partial name="~/Views/ServiceFabric/Discovery.cshtml" />
+                <partial name="~/Views/ServiceFabricMesh/Discovery.cshtml" />
             </div>
         </div>
     </div>
@@ -278,6 +285,8 @@
                 <partial name="~/Views/AKS/Integration.cshtml" />
                 <partial name="~/Views/AppService/Integration.cshtml" />
                 <partial name="~/Views/ServiceFabric/Integration.cshtml" />
+                <partial name="~/Views/ServiceFabricMesh/Integration.cshtml" />
+
             </div>
         </div>
     </div>
