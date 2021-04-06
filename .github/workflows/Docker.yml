@@ -42,7 +42,7 @@ jobs:
 # THIRD STEP: DEPLOY TO DEV
   deploy-to-dev:
     name: Deploy to Dev
-    runs-on: ububtu-latest
+    runs-on: ubuntu-latest
     
     steps:
     - name: Download Image from Build Artifact
