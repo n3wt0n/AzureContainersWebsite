@@ -1,0 +1,27 @@
+name: Docker CI CD
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+  workflow_dispatch:
+
+env:
+  IMAGE_NAME: azurecontainerswebsite
+  IMAGE_TAG: ${{ github.run_id }}
+
+jobs:
+
+  build-image:
+    name: Build Container Image
+    runs-on: ubuntu-latest
+    defaults:
+      run: 
+        working-directory: AzureContainersWebsite
+    
+    steps:
+    - uses: actions/checkout@v2
+    
+    - name: Build the Docker image
+      run: docker build . --file Dockerfile --tag $IMAGE_NAME:$IMAGE_TAG
