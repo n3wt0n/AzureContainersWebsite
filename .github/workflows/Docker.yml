@@ -46,6 +46,8 @@ jobs:
     needs: build-image
     
     steps:
+    - run: mkdir ${{ github.workspace }}
+    
     - name: Download Image from Build Artifact
       id: downloadimage
       uses: actions/download-artifact@v2.0.8
