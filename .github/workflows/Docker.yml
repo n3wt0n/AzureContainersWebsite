@@ -10,10 +10,12 @@ on:
 defaults:
   run:
     working-directory: AzureContainersWebsite
+
 # SECOND STEP
 env:
-  imagetag: ${{ date +%s }}
-  
+  imagetag: ${{ github.run_id }}
+#---
+
 jobs:
   
   build-image:
@@ -22,7 +24,7 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    
+      
     - name: Build the Docker image
       run: docker build . --file Dockerfile --tag azurecontainerswebsite:$imagetag
 
