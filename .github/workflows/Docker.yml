@@ -48,7 +48,7 @@ jobs:
     needs: build-image
     environment:
       name: Dev
-      url: http://$ACR_NAME
+      url: http://${{ env.ACR_NAME }}
     
     steps:   
     - name: Download Image from Build Artifact
@@ -65,7 +65,7 @@ jobs:
       with:
         username: AzureContainersWebsite
         password: ${{ secrets.ACRPASSWORD }}
-        login-server: $ACR_NAME
+        login-server: ${{ env.ACR_NAME }}
         
     - name: Re-Tag image for ACR
       run: docker tag $IMAGE_NAME:$IMAGE_TAG $ACR_NAME/$IMAGE_NAME:$IMAGE_TAG
