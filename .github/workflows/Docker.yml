@@ -71,5 +71,5 @@ jobs:
       run: docker tag $IMAGE_NAME:$IMAGE_TAG $ACR_NAME/$IMAGE_NAME:$IMAGE_TAG
       
     - name: Push image to ACR
-      run: docker image push $ACR_URL/$IMAGE_NAME:$IMAGE_TAG
+      run: docker image push $ACR_NAME/$IMAGE_NAME:$IMAGE_TAG
 
