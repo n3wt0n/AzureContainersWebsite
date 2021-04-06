@@ -84,4 +84,4 @@ jobs:
       uses: Azure/webapps-deploy@v2
       with:
         app-name: azurecontainers       
-        images: $${{ format('{0}/{1}:{2}'), env.ACR_NAME, env.IMAGE_NAME, env.IMAGE_TAG }}
+        images: $${{ format('{0}/{1}:{2}', env.ACR_NAME, env.IMAGE_NAME, env.IMAGE_TAG) }}
