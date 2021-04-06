@@ -13,7 +13,7 @@ env:
   IMAGE_TAG: ${{ github.run_id }}
 #---
 # THIRD STEP
-  ACR_NAME: azurecontainers.azurewebsites.net
+  ACR_NAME: azurecontainerswebsite.azurecr.io
 #---
 
 jobs:
@@ -48,7 +48,7 @@ jobs:
     needs: build-image
     environment:
       name: Dev
-      url: http://${{ env.ACR_NAME }}
+      url: http://azurecontainers.azurewebsites.net
     
     steps:   
     - name: Download Image from Build Artifact
