@@ -60,14 +60,24 @@ jobs:
         username: AzureContainersWebsite 
         password: ${{ secrets.ACRPASSWORD }}
         login-server: ${{ env.ACR_NAME }}
-        
+                
     - name: Re-Tag Image
       run: docker tag $IMAGE_NAME:$IMAGE_TAG $ACR_NAME/$IMAGE_NAME:$IMAGE_TAG
     
     - name: Push Image to ACR
       run: docker image push $ACR_NAME/$IMAGE_NAME:$IMAGE_TAG
-      
     
+    - name: Azure Login
+      uses: Azure/login@v1
+      with:
+        # az ad sp create-for-rbac --name "{sp-name}" --sdk-auth
+        creds: ${{ secrets.AZURE_CREDENTIALS }}
+    
+    - name: Deploy to Azure WebApp
+      uses: Azure/webapps-deploy@v2
+      with:
+        app-name: azurecontainers        
+        images:  ${{ format('{0}/{1}:{2}', env.ACR_NAME, env.IMAGE_NAME, env.IMAGE_TAG) }}
     
       
     
