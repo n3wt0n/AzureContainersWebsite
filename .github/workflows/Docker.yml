@@ -38,3 +38,17 @@ jobs:
       with:      
         name: ACWImage
         path:  ${{ format('{0}/{1}.tar', github.workspace, env.IMAGE_NAME) }}
+
+# THIRD STEP: DEPLOY TO DEV
+  deploy-to-dev:
+    name: Deploy to Dev
+    runs-on: ububtu-latest
+    
+    steps:
+    - name: Download Image from Build Artifact
+      uses: actions/download-artifact@v2.0.8
+      with:
+        name: ACWImage
+           
+    - name: Rehidrate the Image
+      run: docker load ${{ format('{0}/{1}.tar', ACWImage, env.IMAGE_NAME) }}
