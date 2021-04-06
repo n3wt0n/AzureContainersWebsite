@@ -5,8 +5,6 @@ EXPOSE 443
 
 FROM microsoft/dotnet:2.1-sdk AS build
 WORKDIR /src
-#COPY AzureContainersWebsite.csproj AzureContainersWebsite/
-#RUN dotnet restore AzureContainersWebsite/AzureContainersWebsite.csproj
 COPY . AzureContainersWebsite/
 WORKDIR /src/AzureContainersWebsite
 RUN dotnet build AzureContainersWebsite.csproj -c Release -o /app
