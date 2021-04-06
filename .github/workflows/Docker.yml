@@ -12,7 +12,7 @@ defaults:
     working-directory: AzureContainersWebsite
 # SECOND STEP
 env:
-  imagetag: $(date +%s)
+  imagetag: ${{ date +%s }}
   
 jobs:
   
