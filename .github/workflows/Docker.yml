@@ -10,7 +10,10 @@ on:
 defaults:
   run:
     working-directory: AzureContainersWebsite
-
+# SECOND STEP
+env:
+  imagetag: $(date +%s)
+  
 jobs:
   
   build-image:
@@ -21,4 +24,14 @@ jobs:
     - uses: actions/checkout@v2
     
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
+      run: docker build . --file Dockerfile --tag azurecontainerswebsite:$imagetag
+
+# SECOND STEP: PUBLISH AS ARTIFACT
+    - name: Save Image as Tar
+      run: docker save -o azurecontainerswebsite.tar azurecontainerswebsite:$imagetag
+
+    - name: Upload Image as Build Artifact
+      uses: actions/upload-artifact@v2.2.2
+      with:      
+        name: ACWImage
+        path: azurecontainerswebsite.tar
