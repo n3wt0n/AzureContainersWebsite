@@ -25,3 +25,14 @@ jobs:
     
     - name: Build the Docker image
       run: docker build . --file Dockerfile --tag $IMAGE_NAME:$IMAGE_TAG
+    
+    - name: Save Image as Tar
+      run: docker save -o ${{ format('{0}/{1}.tar', github.workspace, env.IMAGE_NAME) }} $IMAGE_NAME:$IMAGE_TAG
+      
+    - name: Upload a Build Artifact
+      uses: actions/upload-artifact@v2.2.2
+      with:
+        name: ACWImage
+        path: ${{ format('{0}/{1}.tar', github.workspace, env.IMAGE_NAME) }}
+        
+    
