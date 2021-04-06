@@ -51,10 +51,10 @@ jobs:
       uses: actions/download-artifact@v2.0.8
       with:
         name: ACWImage
-        path: ACWImage
+        path: ${{ github.workspace }}
     
     - name: List files
       run: ls ${{ steps.downloadimage.outputs.download-path }}
            
     - name: Rehidrate the Image
-      run: docker load -i ${{ format('{0}/ACWImage/{1}.tar', steps.downloadimage.outputs.download-path, env.IMAGE_NAME) }}
+      run: docker load -i ${{ format('{0}/{1}.tar', steps.downloadimage.outputs.download-path, env.IMAGE_NAME) }}
