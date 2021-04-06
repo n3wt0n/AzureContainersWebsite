@@ -43,6 +43,7 @@ jobs:
   deploy-to-dev:
     name: Deploy to Dev
     runs-on: ubuntu-latest
+    needs: build-image
     
     steps:
     - name: Download Image from Build Artifact
