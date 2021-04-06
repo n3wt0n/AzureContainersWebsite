@@ -13,7 +13,7 @@ env:
   IMAGE_TAG: ${{ github.run_id }}
 #---
 # THIRD STEP
-  ACR_URL: https://azurecontainers.azurewebsites.net/
+  ACR_NAME: azurecontainers.azurewebsites.net
 #---
 
 jobs:
@@ -48,7 +48,7 @@ jobs:
     needs: build-image
     environment:
       name: Dev
-      url: $ACR_URL
+      url: http://$ACR_NAME
     
     steps:   
     - name: Download Image from Build Artifact
@@ -65,10 +65,10 @@ jobs:
       with:
         username: AzureContainersWebsite
         password: ${{ secrets.ACRPASSWORD }}
-        login-server: azurecontainerswebsite.azurecr.io
+        login-server: $ACR_NAME
         
     - name: Re-Tag image for ACR
-      run: docker tag $IMAGE_NAME:$IMAGE_TAG $ACR_URL/$IMAGE_NAME:$IMAGE_TAG
+      run: docker tag $IMAGE_NAME:$IMAGE_TAG $ACR_NAME/$IMAGE_NAME:$IMAGE_TAG
       
     - name: Push image to ACR
       run: docker image push $ACR_URL/$IMAGE_NAME:$IMAGE_TAG
