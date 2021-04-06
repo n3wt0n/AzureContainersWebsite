@@ -12,6 +12,9 @@ env:
   IMAGE_NAME: azurecontainerswebsite
   IMAGE_TAG: ${{ github.run_id }}
 #---
+# THIRD STEP
+  ACR_URL: https://azurecontainers.azurewebsites.net/
+#---
 
 jobs:
     
@@ -43,6 +46,9 @@ jobs:
     name: Deploy to Dev
     runs-on: ubuntu-latest
     needs: build-image
+    environment:
+      name: Dev
+      url: $ACR_URL
     
     steps:   
     - name: Download Image from Build Artifact
@@ -50,9 +56,20 @@ jobs:
       uses: actions/download-artifact@v2.0.8
       with:
         name: ACWImage
-    
-    - name: List files
-      run: ls ${{ steps.downloadimage.outputs.download-path }}
-           
+               
     - name: Rehidrate the Image
       run: docker load -i ${{ format('{0}/{1}.tar', steps.downloadimage.outputs.download-path, env.IMAGE_NAME) }}
+      
+    - name: Azure Container Registry Login
+      uses: Azure/docker-login@v1
+      with:
+        username: AzureContainersWebsite
+        password: ${{ secrets.ACRPASSWORD }}
+        login-server: azurecontainerswebsite.azurecr.io
+        
+    - name: Re-Tag image for ACR
+      run: docker tag $IMAGE_NAME:$IMAGE_TAG $ACR_URL/$IMAGE_NAME:$IMAGE_TAG
+      
+    - name: Push image to ACR
+      run: docker image push $ACR_URL/$IMAGE_NAME:$IMAGE_TAG
+
