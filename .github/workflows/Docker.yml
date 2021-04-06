@@ -51,4 +51,4 @@ jobs:
         name: ACWImage
            
     - name: Rehidrate the Image
-      run: docker load ${{ format('{0}/{1}.tar', ACWImage, env.IMAGE_NAME) }}
+      run: docker load ${{ format('ACWImage/{0}.tar', env.IMAGE_NAME) }}
