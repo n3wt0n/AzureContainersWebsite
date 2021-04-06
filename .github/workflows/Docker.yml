@@ -31,7 +31,7 @@ jobs:
 
 # SECOND STEP: PUBLISH AS ARTIFACT
     - name: Save Image as Tar
-      run: docker save -o --output ${{ format('{0}/{1}.tar', github.workspace, env.IMAGE_NAME) }} $IMAGE_NAME:$IMAGE_TAG
+      run: docker save -o ${{ format('{0}/{1}.tar', github.workspace, env.IMAGE_NAME) }} $IMAGE_NAME:$IMAGE_TAG
 
     - name: Upload Image as Build Artifact
       uses: actions/upload-artifact@v2.2.2
